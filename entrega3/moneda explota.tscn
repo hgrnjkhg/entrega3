@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://cedf6tvshh6qt"]
+
+[ext_resource type="Texture2D" uid="uid://bmd3xqc3bmonv" path="res://moneda.png" id="1_mx0dt"]
+[ext_resource type="Script" uid="uid://mkbwbp4bey6c" path="res://moneda.gd" id="2_i4dq7"]
+[ext_resource type="PackedScene" uid="uid://rcenq2c8b30j" path="res://explosio.tscn" id="3_i4dq7"]
+[ext_resource type="AudioStream" uid="uid://dv80pyjimv4lq" path="res://coin-recieved-230517.mp3" id="4_a0kxe"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Moneda" type="Sprite2D" parent="."]
+position = Vector2(553, 315)
+texture = ExtResource("1_mx0dt")
+script = ExtResource("2_i4dq7")
+explosio = ExtResource("3_i4dq7")
+
+[node name="so" type="AudioStreamPlayer2D" parent="Moneda"]
+stream = ExtResource("4_a0kxe")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 418.0
+offset_top = 246.0
+offset_right = 694.0
+offset_bottom = 392.0
