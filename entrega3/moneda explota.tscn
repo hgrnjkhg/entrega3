@@ -36,7 +36,7 @@ offset_left = 388.0
 offset_top = 487.0
 offset_right = 797.0
 offset_bottom = 569.0
-text = "Pem aquí per començar i tot seguit prem la moneda"
+text = "Prem aquí per començar i tot seguit prem la moneda"
 
 [connection signal="input_event" from="MonedaArea" to="." method="_on_moneda_area_input_event"]
 [connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
