@@ -28,4 +28,6 @@ func kill():
 
 
 func _on_button_pressed() -> void:
-	pass # Replace with function body.
+	$Moneda.mouse_filter = Control.MOUSE_FILTER_STOP
+	$Control/Button.visible = false
+	

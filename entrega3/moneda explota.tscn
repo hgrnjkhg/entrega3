@@ -7,14 +7,15 @@
 
 [node name="Node2D" type="Node2D"]
 
+[node name="so" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(553, 315)
+stream = ExtResource("4_a0kxe")
+
 [node name="Moneda" type="Sprite2D" parent="."]
 position = Vector2(553, 315)
 texture = ExtResource("1_mx0dt")
 script = ExtResource("2_i4dq7")
 explosio = ExtResource("3_i4dq7")
-
-[node name="so" type="AudioStreamPlayer2D" parent="Moneda"]
-stream = ExtResource("4_a0kxe")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -24,7 +25,9 @@ offset_bottom = 40.0
 
 [node name="Button" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 418.0
-offset_top = 246.0
-offset_right = 694.0
-offset_bottom = 392.0
+offset_left = 422.0
+offset_top = 504.0
+offset_right = 700.0
+offset_bottom = 586.0
+
+[connection signal="pressed" from="Control/Button" to="Moneda" method="_on_button_pressed"]
